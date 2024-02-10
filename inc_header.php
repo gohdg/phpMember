@@ -17,7 +17,13 @@
       crossorigin="anonymous"
     ></script>
     <!-- End 부트스트랩 -->
-    <script src="./js/member.js"></script>
+    <?php
+if (isset($js_array)) {
+    foreach ($js_array as $var) {
+        echo '<script src="' . $var . '"></script>' . PHP_EOL;
+    }
+}
+?>
   </head>
   <body>
     <div class="container">

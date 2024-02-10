@@ -9,18 +9,18 @@
 // }
 // print_r($_POST);
 //hmm
-
+$js_array = ['./js/member_input.js'];
 
 include "inc_header.php";
 ?>
-<main class="w-50 mx-auto border rounded-5 p-5 ">
+<main class="w-50 mx-auto border rounded-5 p-5">
     <h1 class="text-center">회원가입</h1>
     <div class="form-group d-flex gap-2 align-items-end ">
         <div>
         <label for="f_id" class="form-label">아이디</label>
         <input type="text" id="f_id" class="form-control" placeholder="아이디를 입력해 주세요.">
         </div>
-        <button class="btn btn-secondary">아이디 중복확인</button>
+        <button class="btn btn-secondary" id="btn_id_check">아이디 중복확인</button>
     </div>
 
     <div class="form-group mt-3 d-flex gap-2 justify-content-between ">
@@ -31,7 +31,7 @@ include "inc_header.php";
         <div class=" flex-grow-1">
         <label for="f_password2" class="form-label">비밀번호 확인</label>
         <input type="password" id="f_password2" class="form-control" placeholder="비밀번호를 입력해 주세요.">
-        </div>        
+        </div>
     </div>
 
     <div class="form-group mt-3 d-flex gap-2 align-items-end ">
@@ -58,12 +58,13 @@ include "inc_header.php";
         <div class=" flex-grow-1">
         <label for="f_addr2" class="form-label">상세주소</label>
         <input type="text" id="f_addr2" class="form-control" placeholder="상세주소를 입력해 주세요.">
-        </div>        
+        </div>
     </div>
 
     <div class="mt-3 d-flex gap-5">
         <div>
-            <input type="file" name="profile" class="form-control">
+            <label for="f_photo" class=" form-label">프로필이미지</label>
+            <input type="file" name="profile" class="form-control" id="f_photo">
         </div>
         <img src="images/noavatar.png" alt="profile image" class="w-25">
     </div>

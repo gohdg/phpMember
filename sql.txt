@@ -1,0 +1,30 @@
+CREATE DATABASE memsite;
+
+SHOW DATABASES;
+
+DROP database member;
+
+use memsite;
+
+create table `member` (
+idx int unsigned not null auto_increment,
+`id` varchar(100) default '',
+`name` varchar(100) default '',
+`email` varchar(100) default '',
+`password` varchar(50) default '',
+`zipcode` char(5) default '',
+addr1 varchar(255) default '',
+addr2 varchar(255) default '',
+photo varchar(255) default '',
+create_at datetime,
+ip varchar(20) default '',
+primary key(idx),
+unique index id (id) using btree
+);
+
+show tables;
+
+SELECT * FROM member;
+
+INSERT INTO member (id, name, email) values('kingchobo', '킹초보', 'email@email.com');
+

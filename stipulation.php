@@ -1,4 +1,7 @@
-<?php include 'inc_header.php'; ?>    
+<?php
+$js_array = ['./js/member.js'];
+include 'inc_header.php';
+?>
       <main>
         <h1 class="text-center mt-5">회원 약관 및 개인정보 취급방침 동의</h1>
         <h4>회원 약관</h4>
@@ -44,5 +47,4 @@
           <input type="hidden" name="chk" value="0">
         </form>
       </main>
-<?php include 'inc_footer.php' ?>
-    
+<?php include 'inc_footer.php'?>
